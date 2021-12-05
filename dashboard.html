@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<!-- if lang == "en" ? lang == "en" && dir = "ltr" -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>profile dashboard</title>
+        <!-- lang == "en" ?  remove comment bootstrap.min.css and add comeent css/bootstrap-rtl.min.css  -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="build/css/intlTelInput.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-body">
+    <!--============================== start header ===========================-->
+    <header class="header">
+        <div class="container">
+            <div class="right">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+
+                <div class="dropdown lang">
+                    <button class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        <img src="img/saudi-arabia.png" alt="">
+                        عربى
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">عربى</a>
+                        <a class="dropdown-item" href="#">EN</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="profile-dashboard">
+                <img src="img/default.jpg" alt="">
+                الملف الشخصى
+            </a>
+    </header>
+
+    <!--============================ end-header ================================-->
+
+    <!-- ============================ start content ========================== -->
+    <section class="content">
+
+        <section class="home-head" style="background-image: url(img/bgc-header.png);">
+            <p class="inner-title">لوحة التحكم</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">
+                        <i class="fas fa-home"></i>
+                        الرئيسية</a></li>
+                    <li class="breadcrumb-item bgc-color">الملف الشخصى</li>
+                </ol>
+            </nav>
+        </section>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="side-bar">
+                        <div class="side-bar-img">
+                            <img src="img/default.jpg" alt="">
+                            <p class="hint">أحمد سكر</p>
+                        </div>
+                        <ul>
+
+                            <li>
+                                <a href="dashboard.html" class="side-link active">
+                                    <i class="far fa-user"></i>
+                                    <span>الملف الشخصى</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="change-password.html" class="side-link">
+                                    <i class="fas fa-lock"></i>
+                                    <span>تغيير كلمة المرور</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="my-products.html" class="side-link">
+                                    <i class="fas fa-box"></i>
+                                    <span>منتجاتى</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="messages.html" class="side-link">
+                                    <i class="far fa-comments"></i>
+                                    <span>الرسائل</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="subscription-packages-user.html" class="side-link">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>الباقات</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="login.html" class="side-link">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>تسجيل الخروج</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form class="form-sign-in form-layout">
+                        <p class="title-border">
+                            تعديل البيانات الشخصية
+                        </p>
+                        <div class="row form-body">
+                            <div class="col-12 col-md-10">
+                                <div class="profile-img-upload">
+                                    <label class="inner">
+                                        <input type="file" class="d-none">
+                                        <img src="img/default.jpg" alt="">
+                                        <i class="fas fa-camera"></i>
+                                    </label>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">إسم البائع</label>
+                                    <input type="text" class="input" placeholder="احمد سكر">
+                                </div>
+                
+                                <div class="img-uploader form-group">
+                                    <label class="label">
+                                        صورة الغلاف
+                                    </label>
+                                    <label class="upload-label">
+                                        <input type="file" class="d-none">
+                                        <span class="input">
+                                            الرجاء إرفاق صورة الغلاف
+                                        </span>
+                                        <i class="fas fa-camera icon"></i>
+                                    </label>
+                                </div>
+                
+                                <div class="phone-input form-group input-number">
+                                    <label for="" class="label">رقم الجوال</label>
+                                    <div class="input-phone-number">
+                                        <input type="number" id="phone" placeholder="00965512345689" value="+966">
+                                    </div>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">الواتساب</label>
+                                    <label class="input with-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <input type="number" class="" placeholder="00965512345689">
+                                    </label>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">المنطقة</label>
+                                    <select name="" id="" class="select">
+                                        <option value="">المنطقة الشرقية</option>
+                                        <option value="">المنطقة</option>
+                                        <option value="">المنطقة</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">المحافظة</label>
+                                    <select name="" id="" class="select">
+                                        <option value="">محافظة الرياض</option>
+                                        <option value="">المنطقة</option>
+                                        <option value="">المنطقة</option>
+                                    </select>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">المول / المحلات التجارية</label>
+                                    <select name="" id="" class="select">
+                                        <option value="">مول أوامر الشبكة</option>
+                                        <option value="">المنطقة</option>
+                                        <option value="">المنطقة</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="" class="label">القسم</label>
+                                    <select name="" id="" class="select">
+                                        <option value="">قسم الملابس</option>
+                                        <option value="">المنطقة</option>
+                                        <option value="">المنطقة</option>
+                                    </select>
+                                </div>
+                
+                                <div class="img-uploader form-group">
+                                    <label class="label">
+                                        صورة السجل التجارى
+                                    </label>
+                                    <label class="upload-label">
+                                        <input type="file" class="d-none">
+                                        <span class="input">
+                                            الرجاء إرفاق صورة السجل التجارى
+                                        </span>
+                                        <i class="fas fa-camera icon"></i>
+                                    </label>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label class="label">
+                                        تفاصيل المحل
+                                    </label>
+                                    <textarea name="" id="" placeholder="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى" class="input"></textarea>
+                                </div>
+                                <button class="sabmit-btn">حفظ</button>
+                            </div>
+                        </div>
+        
+                    </form>
+        
+                    <form class="form-sign-in form-layout">
+                        <p class="title-border">
+                            روابط التواصل الاجتماعى
+                        </p>
+
+                        <div class="row form-body">
+                            <div class="col-12 col-lg-10">
+
+                                <div class="form-group">
+                                    <label for="" class="label">الفيسبوك</label>
+                                    <label class="input with-icon with-social-icon">
+                                        <i class="fab fa-facebook-f bgc-icon"></i>
+                                        <input type="text" class="" placeholder="https://www.facebook.com/">
+                                    </lab>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">تويتر</label>
+                                    <label class="input with-icon with-social-icon">
+                                        <i class="fab fa-twitter bgc-icon"></i>
+                                        <input type="text" class="" placeholder="https://www.Twitter.com/">
+                                    </label>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">الواتساب</label>
+                                    <label class="input with-icon with-social-icon">
+                                        <i class="fab fa-snapchat-ghost bgc-icon"></i>
+                                        <input type="number" class="" placeholder="00965512345689">
+                                    </label>
+                                </div>
+                
+                                <div class="form-group">
+                                    <label for="" class="label">الواتساب</label>
+                                    <label class="input with-icon with-social-icon">
+                                        <i class="fab fa-whatsapp bgc-icon"></i>
+                                        <input type="number" class="" placeholder="00965512345689">
+                                    </label>
+                                </div>
+                
+                                <button type="submit" class="sabmit-btn" data-toggle="modal" data-target="#exampleModalCenter">حفظ التغييرات</button>
+                            </div>
+                        </div>
+        
+        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+    <!--========================================= end content =================================================-->
+
+    <!-- ======================================== start modal ================================================ -->
+  <!-- Modal -->
+  <div class="modal fade dashboard-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+            <img src="img/done-img.png" alt="" class="img">
+            <p class="head">تهانينا ! تم إرسال بياناتك للإدارة بنجاح</p>
+            <span class="hint">تم إرسال بياناتك للإدارة للمراجعة وسيتم الرد عليك بعد </span>
+            <span class="hint-2">الانتهاء من المراجعه في اقرب وقت</span>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="sabmit-btn w-100" data-dismiss="modal">رجوع</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--========================= start footer ===============================-->
+    <footer class="footer">
+        <div class="section-footer" style="background-image: url(img/footer-img.png); background-size: cover;">
+            <div class="container">
+                <div class="row mb-footer">
+                    <div class="col-12 col-lg-4">
+                        <div class="img-footer">
+                            <a href="#" class="footer-logo">
+                                <img src="img/logo_mally_top_.png" alt="">
+                            </a>
+                            <p class="desc">
+                                هذا النص هو مثال لنص يمكن أن يستبدل ف نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص
+                            </p>
+                        </div>
+                        <div class="icon">
+                            <a href=""><i class="fab fa-twitter ic tw"></i></a>
+                            <a href=""><i class="fab fa-youtube ic yt"></i></a>
+                            <a href=""><i class="fab fa-facebook-f ic fb"></i></a>
+                            <a href=""><i class="fab fa-google-plus-g ic go"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 arrow">
+                        <span class="foot-title bg-title"><p>روابط سريعة</p></span>
+                        <div class="links">
+                            <a href="#" class="link">الرئيسية</a>
+                            <a href="#" class="link">من نحن</a>
+                            <a href="#" class="link">مميزاتنا</a>
+                            <a href="#" class="link">تواصل معنا</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 arrow">
+                        <span class="foot-title bg-title"><p>روابط سريعة</p></span>
+                        <div class="links">
+                            <a href="#" class="link">امتيازات الشركة</a>
+                            <a href="#" class="link">امتيازات مقدم الخدمة</a>
+                            <a href="#" class="link">الأسئلة الشائعة</a>
+                            <a href="#" class="link">الشروط والاحكام</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <span class="foot-title bg-title"><p>تواصل معنا</p></span>
+                        <div class="contact">
+                            <a href="#" class="link link-icn">
+                                <i class="fas fa-phone-volume"></i>
+                                <p class="desc">
+                                    <span>رقم الجوال</span>
+                                    <span>123-456-7898</span>
+                                </p>
+                            </a>
+                            <a href="#" class="link link-icn">
+                                <i class="fas fa-envelope-open-text"></i>
+                                <p class="desc">
+                                    <span>البريد الالكترونى</span>
+                                    <span>name@gmail.com</span>
+                                </p>
+                            </a>
+                            <a href="#" class="link link-icn">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p class="desc">
+                                    <span>العنوان</span>
+                                    <span>الرياض , السعودية</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text">
+                جميع الحقوق محفوظة
+                <i class="far fa-copyright"></i>
+                لموقع
+                <span>مولى توب</span>
+            </div>
+        </div>
+    </footer>
+    <!--========================== end footer =================================-->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+        <!-- lang == "en" ?  remove comment bootstrap.min.js and add comeent js/bootstrap-rtl.min.js  -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/bootstrap-rtl.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="build/js/intlTelInput.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        new WOW().init();
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, ({
+            // options here
+        }));
+        document.getElementById('phone').value = '';
+    </script>
+
+    <script>
+        $("#image").change(function () {
+            $(".upload-area").html("")
+            $(this).parents(".user-img").find(".upload-area").append('<img class="profile-pic prev" src="" alt=""> <span class="remove">x</span>')
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.prev').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        $(document).on("click", ".remove", function () {
+            $(this).parent().find(".prev").remove()
+            $("#image").val("")
+            $(this).remove()
+        });
+
+        $(document).on('change', '.img-uploader input', function (event) {
+            $(this).parents('.img-uploader').find('.upload-preview').remove();
+            if(event.target.files.length > 0) {
+                $(this).parents('.img-uploader').append(
+                    '<div class="upload-preview"><img src="' +
+                    URL.createObjectURL(event.target.files[0]) +
+                    '" alt=""></div>'
+                );
+            }
+        });
+        $(document).on('change', '.profile-img-upload input', function (event) {
+            if(event.target.files.length > 0) {
+                $(this).siblings('img').attr('src', URL.createObjectURL(event.target.files[0]));
+            } else {
+                $(this).siblings('img').attr('src','img/default.jpg')
+            }
+        });
+
+
+        $('form').submit(function(e) {
+            e.preventDefault()
+            $('#success_modal').modal('show')
+        });
+    </script>
+
+</body>
+
+</html>
