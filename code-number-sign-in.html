@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="code-container">
-                    <input
+                    <!-- <input
                       type="number"
                       class="code"
                       placeholder="0"
@@ -131,7 +131,11 @@
                       required
                       disabled
                       />
-                    <input type="hidden" class="total">
+                    <input type="hidden" class="total"> -->
+                    <input type="text" placeholder="0" maxlength="1" class="confirm-input code" />
+                    <input type="text" placeholder="0" maxlength="1" class="confirm-input code disabl-class" />
+                    <input type="text" placeholder="0" maxlength="1" class="confirm-input code disabl-class" />
+                    <input type="text" placeholder="0" maxlength="1" class="confirm-input code disabl-class" />
                   </div>
 
                   <button class="resend-code" type="button">أعد إرسال الكود مرة أخرى</button>
@@ -250,7 +254,8 @@
     <script>
         new WOW().init();
     </script>
-    <script>
+
+    <!-- <script>
         // let ended
         $('.code').keyup(function(e) {
             var key = e.keyCode || e.charCode;
@@ -288,7 +293,79 @@
             e.preventDefault()
             $('#success_modal').modal('show')
         });
+    </script> -->
+
+    <script>
+        const inputs = document.querySelectorAll("input");
+        const codeBlock = document.getElementById("code-block");
+        const code = document.getElementById("code");
+        const form = document.querySelector("form");
+
+        $('.code').keyup(function(e) {
+            var key = e.keyCode || e.charCode;
+            if(key != 8 && key != 46) {
+                $(this).next().removeClass('disabl-class');
+                if($(this).index() < $('.code').length - 1 && key >= 96 && key <= 105) {
+                    // $(this).next().prop('disabled', false).focus();
+                }
+                
+                if($(this).index() == $('.code').length - 1) {
+                    $('.sabmit-btn').prop('disabled', false).focus()
+                }
+                let total = ""
+                $('.code').each(function(i) {
+                    total += $(this).val()
+                })
+            }
+        });
+
+        inputs.forEach((input, key) => {
+        if (key !== 0) {
+            input.addEventListener("click", function () {
+            inputs[1].focus();
+            });
+            
+        };
+        input.addEventListener("keyup", function () {
+            if (input.value) {
+                if (key === 4) {
+                    // Last one tadaa
+                    const userCode = [...inputs].map((input) => input.value).join("");
+                    inputs[key].maxLength  = 1;
+                } else {
+                    inputs[key + 1].focus();
+                }
+            }
+        });
+        });
+
     </script>
+
+<script>
+    (function($) {
+        $.fn.inputFilter = function(inputFilter) {
+        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+        if (inputFilter(this.value)) {
+            this.oldValue = this.value;
+            this.oldSelectionStart = this.selectionStart;
+            this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty("oldValue")) {
+            this.value = this.oldValue;
+            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        } else {
+            this.value = "";
+        }
+        });
+        };
+}       (jQuery));
+
+$(document).ready(function() {
+$('.confirm-input').inputFilter(function(value) {
+return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+});
+});
+</script>
+
 </body>
 
 </html>

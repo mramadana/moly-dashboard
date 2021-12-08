@@ -4230,4 +4230,11 @@ html[lang=ar] .paying-off .paying-box .img {
   object-fit: cover;
 }
 
+.code-container .disabl-class {
+  border-color: #5C914A;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+  background-color: #e1ebde;
+  color: #5C914A;
+}
+
 /*# sourceMappingURL=style.css.map */
