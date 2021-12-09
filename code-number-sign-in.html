@@ -304,9 +304,8 @@
         $('.code').keyup(function(e) {
             var key = e.keyCode || e.charCode;
             if(key != 8 && key != 46) {
-                $(this).next().removeClass('disabl-class');
+                
                 if($(this).index() < $('.code').length - 1 && key >= 96 && key <= 105) {
-                    // $(this).next().prop('disabled', false).focus();
                 }
                 
                 if($(this).index() == $('.code').length - 1) {
@@ -316,6 +315,9 @@
                 $('.code').each(function(i) {
                     total += $(this).val()
                 })
+            }
+            if($(this).length && $(this).val().length) {
+                $(this).next().removeClass('disabl-class');
             }
         });
 
@@ -365,6 +367,7 @@ return /^\d*$/.test(value);    // Allow digits only, using a RegExp
 });
 });
 </script>
+
 
 </body>
 
